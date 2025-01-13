@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.apps.user.mapper.UserMapper">
+
+  <select id="findUsers" resultType="com.dms.apps.user.domain.UserVO">
+    select user_id
+         , login_id
+         , login_pwd
+         , user_name
+         , user_email
+         , sort_order
+         , use_yn
+         , reg_user_id
+         , reg_dttm
+         , upd_user_id
+         , upd_dttm
+      from DMS_COMM_USER
+  </select>
+
+  <select id="findUserById" parameterType="String" resultType="com.dms.apps.user.domain.UserVO">
+    select user_id
+         , login_id
+         , login_pwd
+         , user_name
+         , user_email
+         , sort_order
+         , use_yn
+         , reg_user_id
+         , reg_dttm
+         , upd_user_id
+         , upd_dttm
+      from DMS_COMM_USER
+     where 1=1
+       and user_id = #{id}
+  </select>
+
+</mapper>

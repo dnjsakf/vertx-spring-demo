@@ -1,0 +1,24 @@
+spring:
+  application.name: vertx
+  datasource:
+    h2:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem:testdb
+      username: sa
+      password: 
+    postgres:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/dochi
+      username: dochi
+      password: dochi123
+
+vertx:
+  http:
+    host: localhost
+    port: 8081
+  worker-pool-size: 20
+  worker: true
+  instances: 2
+
+logging:
+  config: classpath:/logging/logback-spring.xml
