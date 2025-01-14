@@ -1,25 +1,16 @@
 package com.dms.apps;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.dms.apps.vertx.MainLauncher;
+import com.dms.apps.vertx.configs.VertxProcessor;
 
-@SpringBootApplication
-// @EnableAspectJAutoProxy
-// public class VertxApplication implements CommandLineRunner {
-public class VertxApplication{
-
-    // @Autowired
-    // private Vertx vertx;
-
-    // @Autowired
-    // private UserVerticle userVerticle;
-
+public class VertxApplication {
+    
     public static void main(String[] args) {
-        SpringApplication.run(VertxApplication.class, args);
+        
+        new MainLauncher().dispatch(new String[] {
+            "run", "java:"+VertxProcessor.class.getCanonicalName()
+        });
+        
     }
-
-    // @Override
-    // public void run(String... args) throws Exception {
-    //     vertx.deployVerticle(userVerticle);
-    // }
+  
 }

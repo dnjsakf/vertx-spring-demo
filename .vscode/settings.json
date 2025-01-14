@@ -1,0 +1,26 @@
+{
+  "java.configuration.runtimes": [
+    {
+        "name": "JavaSE-11",
+        "path": "C:\\dev\\java\\openjdk-11.0.15.9"
+    },
+    {
+        "name": "JavaSE-17",
+        "path": "C:\\dev\\java\\openjdk-17.0.3.0.6",
+        "default":  true
+    },
+    {
+        "name": "JavaSE-1.8",
+        "path": "C:\\dev\\java\\openjdk-1.8.0.332",
+    }
+  ],
+  "java.jdt.ls.java.home": "C:\\dev\\java\\openjdk-17.0.3.0.6",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "C:\\dev\\java\\openjdk-17.0.3.0.6"
+    },
+  ],
+  "maven.executable.options": "--settings ./settings.xml",
+  "editor.tabSize": 4
+}

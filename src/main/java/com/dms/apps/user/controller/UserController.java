@@ -44,7 +44,7 @@ public class UserController {
 
     @RequestMapping("/mvc/user/{id}")
     public Mono<String> getUser(@PathVariable String id, ServerHttpRequest request, ServerHttpResponse response) {
-        request.bodyToMono(UserVO.class).map(user -> { return "User Created: " + user.getId(); });
+        // request.bodyToMono(UserVO.class).map(user -> { return "User Created: " + user.getId(); });
 
         String name = request.getQueryParams().getFirst("name");
 
